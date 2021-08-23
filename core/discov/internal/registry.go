@@ -2,18 +2,23 @@ package internal
 
 import (
 	"context"
+	"crypto/tls"
+	"crypto/x509"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"sort"
 	"strings"
 	"sync"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/contextx"
-	"github.com/351423113/go-zero-extern/core/lang"
-	"github.com/351423113/go-zero-extern/core/logx"
-	"github.com/351423113/go-zero-extern/core/syncx"
-	"github.com/351423113/go-zero-extern/core/threading"
+	//"crypto/tls"
+
+	"github.com/tal-tech/go-zero-extern/core/contextx"
+	"github.com/tal-tech/go-zero-extern/core/lang"
+	"github.com/tal-tech/go-zero-extern/core/logx"
+	"github.com/tal-tech/go-zero-extern/core/syncx"
+	"github.com/tal-tech/go-zero-extern/core/threading"
 	clientv3 "go.etcd.io/etcd/client/v3"
 )
 
@@ -40,9 +45,27 @@ func (r *Registry) GetConn(endpoints []string) (EtcdClient, error) {
 	return r.getCluster(endpoints).getClient()
 }
 
+func (r *Registry) GetConnExtern(endpoints []string, cafile, certfile, keyfile string) (EtcdClient, error) {
+	return r.getClusterExtern(endpoints, cafile, certfile, keyfile).getClient()
+}
+
 // Monitor monitors the key on given etcd endpoints, notify with the given UpdateListener.
 func (r *Registry) Monitor(endpoints []string, key string, l UpdateListener) error {
 	return r.getCluster(endpoints).monitor(key, l)
+}
+
+func (r *Registry) getClusterExtern(endpoints []string, cafile, certfile, keyfile string) *cluster {
+	clusterKey := getClusterKey(endpoints)
+	r.lock.Lock()
+	defer r.lock.Unlock()
+	c, ok := r.clusters[clusterKey]
+	if !ok {
+		fmt.Printf("qqqqqqqq")
+		c = newClusterExtern(endpoints, cafile, certfile, keyfile)
+		r.clusters[clusterKey] = c
+	}
+
+	return c
 }
 
 func (r *Registry) getCluster(endpoints []string) *cluster {
@@ -60,12 +83,41 @@ func (r *Registry) getCluster(endpoints []string) *cluster {
 
 type cluster struct {
 	endpoints  []string
+	tlsConfig  *tls.Config
 	key        string
 	values     map[string]map[string]string
 	listeners  map[string][]UpdateListener
 	watchGroup *threading.RoutineGroup
 	done       chan lang.PlaceholderType
 	lock       sync.Mutex
+}
+
+func newClusterExtern(endpoints []string, cafile, certfile, keyfile string) *cluster {
+	cert, err := tls.LoadX509KeyPair(certfile, keyfile)
+	if err != nil {
+		return nil
+	}
+
+	caData, err := ioutil.ReadFile(cafile)
+	if err != nil {
+		return nil
+	}
+
+	pool := x509.NewCertPool()
+	pool.AppendCertsFromPEM(caData)
+	tlsConf := &tls.Config{
+		Certificates: []tls.Certificate{cert},
+		RootCAs:      pool,
+	}
+	return &cluster{
+		endpoints:  endpoints,
+		tlsConfig:  tlsConf,
+		key:        getClusterKey(endpoints),
+		values:     make(map[string]map[string]string),
+		listeners:  make(map[string][]UpdateListener),
+		watchGroup: threading.NewRoutineGroup(),
+		done:       make(chan lang.PlaceholderType),
+	}
 }
 
 func newCluster(endpoints []string) *cluster {
@@ -228,7 +280,7 @@ func (c *cluster) monitor(key string, l UpdateListener) error {
 }
 
 func (c *cluster) newClient() (EtcdClient, error) {
-	cli, err := NewClient(c.endpoints)
+	cli, err := NewClient(c.endpoints, c.tlsConfig)
 	if err != nil {
 		return nil, err
 	}
@@ -301,7 +353,8 @@ func (c *cluster) watchConnState(cli EtcdClient) {
 }
 
 // DialClient dials an etcd cluster with given endpoints.
-func DialClient(endpoints []string) (EtcdClient, error) {
+func DialClient(endpoints []string, _tlsConfig *tls.Config) (EtcdClient, error) {
+	//func DialClient(endpoints []string) (EtcdClient, error) {
 	return clientv3.New(clientv3.Config{
 		Endpoints:            endpoints,
 		AutoSyncInterval:     autoSyncInterval,
@@ -309,6 +362,7 @@ func DialClient(endpoints []string) (EtcdClient, error) {
 		DialKeepAliveTime:    dialKeepAliveTime,
 		DialKeepAliveTimeout: DialTimeout,
 		RejectOldCluster:     true,
+		TLS:                  _tlsConfig,
 	})
 }
 

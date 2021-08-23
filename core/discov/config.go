@@ -6,6 +6,10 @@ import "errors"
 type EtcdConf struct {
 	Hosts []string
 	Key   string
+	Tls      bool
+	Cafile   string
+	Certfile string
+	Keyfile  string
 }
 
 // Validate validates c.

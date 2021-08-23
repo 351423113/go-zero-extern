@@ -29,6 +29,15 @@ func MustNewServer(c RpcServerConf, register internal.RegisterFn) *RpcServer {
 	return server
 }
 
+func MustNewServerExtern(c RpcServerConf, register internal.RegisterFn) *RpcServer {
+	server, err := NewServer(c, register)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return server
+}
+
 // NewServer returns a RpcServer.
 func NewServer(c RpcServerConf, register internal.RegisterFn) (*RpcServer, error) {
 	var err error
@@ -39,7 +48,7 @@ func NewServer(c RpcServerConf, register internal.RegisterFn) (*RpcServer, error
 	var server internal.Server
 	metrics := stat.NewMetrics(c.ListenOn)
 	if c.HasEtcd() {
-		server, err = internal.NewRpcPubServer(c.Etcd.Hosts, c.Etcd.Key, c.ListenOn, internal.WithMetrics(metrics))
+		server, err = internal.NewRpcPubServerExtern(&c.Etcd, c.ListenOn, internal.WithMetrics(metrics))
 		if err != nil {
 			return nil, err
 		}

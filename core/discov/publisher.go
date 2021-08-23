@@ -18,6 +18,10 @@ type (
 	Publisher struct {
 		endpoints  []string
 		key        string
+		Tls        bool
+		Cafile     string
+		Certfile   string
+		Keyfile    string
 		fullKey    string
 		id         int64
 		value      string
@@ -32,11 +36,15 @@ type (
 // endpoints is the hosts of the etcd cluster.
 // key:value are a pair to be published.
 // opts are used to customize the Publisher.
-func NewPublisher(endpoints []string, key, value string, opts ...PublisherOption) *Publisher {
+func NewPublisher(endpoints []string, key, value string, tls bool, cafile, certfile, keyfile string, opts ...PublisherOption) *Publisher {
 	publisher := &Publisher{
 		endpoints:  endpoints,
 		key:        key,
 		value:      value,
+		Tls:        tls,
+		Cafile:     cafile,
+		Certfile:   certfile,
+		Keyfile:    keyfile,
 		quit:       syncx.NewDoneChan(),
 		pauseChan:  make(chan lang.PlaceholderType),
 		resumeChan: make(chan lang.PlaceholderType),
@@ -51,7 +59,7 @@ func NewPublisher(endpoints []string, key, value string, opts ...PublisherOption
 
 // KeepAlive keeps key:value alive.
 func (p *Publisher) KeepAlive() error {
-	cli, err := internal.GetRegistry().GetConn(p.endpoints)
+	cli, err := internal.GetRegistry().GetConnExtern(p.endpoints, p.Cafile, p.Certfile, p.Keyfile)
 	if err != nil {
 		return err
 	}

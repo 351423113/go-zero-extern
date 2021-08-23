@@ -13,6 +13,21 @@ const (
 	envPodIp = "POD_IP"
 )
 
+func NewRpcPubServerExtern(etcd *discov.EtcdConf, listenOn string, opts ...ServerOption) (Server, error) {
+	registerEtcd := func() error {
+		pubListenOn := figureOutListenOn(listenOn)
+		pubClient := discov.NewPublisher(etcd.Hosts, etcd.Key, pubListenOn, etcd.Tls, etcd.Cafile, etcd.Certfile, etcd.Keyfile)
+		return pubClient.KeepAlive()
+	}
+
+	server := keepAliveServer{
+		registerEtcd: registerEtcd,
+		Server:       NewRpcServer(listenOn, opts...),
+	}
+
+	return server, nil
+}
+
 // NewRpcPubServer returns a Server.
 func NewRpcPubServer(etcdEndpoints []string, etcdKey, listenOn string, opts ...ServerOption) (Server, error) {
 	registerEtcd := func() error {
