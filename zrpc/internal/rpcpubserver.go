@@ -32,7 +32,7 @@ func NewRpcPubServerExtern(etcd *discov.EtcdConf, listenOn string, opts ...Serve
 func NewRpcPubServer(etcdEndpoints []string, etcdKey, listenOn string, opts ...ServerOption) (Server, error) {
 	registerEtcd := func() error {
 		pubListenOn := figureOutListenOn(listenOn)
-		pubClient := discov.NewPublisher(etcdEndpoints, etcdKey, pubListenOn)
+		pubClient := discov.NewPublisher(etcdEndpoints, etcdKey, pubListenOn, false, "", "", "")
 		return pubClient.KeepAlive()
 	}
 	server := keepAliveServer{
