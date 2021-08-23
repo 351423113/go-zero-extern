@@ -14,11 +14,11 @@ import (
 
 	//"crypto/tls"
 
-	"github.com/tal-tech/go-zero-extern/core/contextx"
-	"github.com/tal-tech/go-zero-extern/core/lang"
-	"github.com/tal-tech/go-zero-extern/core/logx"
-	"github.com/tal-tech/go-zero-extern/core/syncx"
-	"github.com/tal-tech/go-zero-extern/core/threading"
+	"github.com/351423113/go-zero-extern/core/contextx"
+	"github.com/351423113/go-zero-extern/core/lang"
+	"github.com/351423113/go-zero-extern/core/logx"
+	"github.com/351423113/go-zero-extern/core/syncx"
+	"github.com/351423113/go-zero-extern/core/threading"
 	clientv3 "go.etcd.io/etcd/client/v3"
 )
 
