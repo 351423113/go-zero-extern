@@ -54,13 +54,16 @@ func (r *Registry) Monitor(endpoints []string, key string, l UpdateListener) err
 	return r.getCluster(endpoints).monitor(key, l)
 }
 
+func (r *Registry) MonitorExtern(cafile, certfile, keyfile string, endpoints []string, key string, l UpdateListener) error {
+	return r.getClusterExtern(endpoints, cafile, certfile, keyfile).monitor(key, l)
+}
+
 func (r *Registry) getClusterExtern(endpoints []string, cafile, certfile, keyfile string) *cluster {
 	clusterKey := getClusterKey(endpoints)
 	r.lock.Lock()
 	defer r.lock.Unlock()
 	c, ok := r.clusters[clusterKey]
 	if !ok {
-		fmt.Printf("qqqqqqqq")
 		c = newClusterExtern(endpoints, cafile, certfile, keyfile)
 		r.clusters[clusterKey] = c
 	}

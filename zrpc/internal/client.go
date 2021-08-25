@@ -53,6 +53,17 @@ func NewClient(target string, opts ...ClientOption) (Client, error) {
 	return &cli, nil
 }
 
+func NewClientExtern(cafile, certfile, keyfile string, target string, opts ...ClientOption) (Client, error) {
+	var cli client
+	resolver.SetCertFile(cafile, certfile, keyfile)
+	opts = append([]ClientOption{WithDialOption(grpc.WithBalancerName(p2c.Name))}, opts...)
+	if err := cli.dial(target, opts...); err != nil {
+		return nil, err
+	}
+
+	return &cli, nil
+}
+
 func (c *client) Conn() *grpc.ClientConn {
 	return c.conn
 }

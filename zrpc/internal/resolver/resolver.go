@@ -31,6 +31,12 @@ func RegisterResolver() {
 	resolver.Register(&disBuilder)
 }
 
+func SetCertFile(cafile, certfile, keyfile string) {
+	disBuilder.Cafile = cafile
+	disBuilder.Certfile = certfile
+	disBuilder.Keyfile = keyfile
+}
+
 type nopResolver struct {
 	cc resolver.ClientConn
 }

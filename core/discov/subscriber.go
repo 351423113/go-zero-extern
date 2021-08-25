@@ -26,7 +26,7 @@ type (
 // endpoints is the hosts of the etcd cluster.
 // key is the key to subscribe.
 // opts are used to customize the Subscriber.
-func NewSubscriber(endpoints []string, key string, opts ...SubOption) (*Subscriber, error) {
+func NewSubscriber(cafile, certfile, keyfile string, endpoints []string, key string, opts ...SubOption) (*Subscriber, error) {
 	var subOpts subOptions
 	for _, opt := range opts {
 		opt(&subOpts)
@@ -35,7 +35,7 @@ func NewSubscriber(endpoints []string, key string, opts ...SubOption) (*Subscrib
 	sub := &Subscriber{
 		items: newContainer(subOpts.exclusive),
 	}
-	if err := internal.GetRegistry().Monitor(endpoints, key, sub.items); err != nil {
+	if err := internal.GetRegistry().MonitorExtern(cafile, certfile, keyfile, endpoints, key, sub.items); err != nil {
 		return nil, err
 	}
 
