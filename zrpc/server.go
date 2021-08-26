@@ -19,6 +19,7 @@ type RpcServer struct {
 	register internal.RegisterFn
 }
 
+
 // MustNewServer returns a RpcSever, exits on any error.
 func MustNewServer(c RpcServerConf, register internal.RegisterFn) *RpcServer {
 	server, err := NewServer(c, register)
