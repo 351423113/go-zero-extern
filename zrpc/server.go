@@ -29,6 +29,7 @@ func MustNewServer(c RpcServerConf, register internal.RegisterFn) *RpcServer {
 	return server
 }
 
+
 func MustNewServerExtern(c RpcServerConf, register internal.RegisterFn) *RpcServer {
 	server, err := NewServer(c, register)
 	if err != nil {
