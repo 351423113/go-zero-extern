@@ -13,6 +13,7 @@ import (
 	"google.golang.org/grpc"
 )
 
+
 // A RpcServer is a rpc server.
 type RpcServer struct {
 	server   internal.Server
