@@ -44,7 +44,6 @@ func NewServer(c RpcServerConf, register internal.RegisterFn) (*RpcServer, error
 	if err = c.Validate(); err != nil {
 		return nil, err
 	}
-
 	var server internal.Server
 	metrics := stat.NewMetrics(c.ListenOn)
 	if c.HasEtcd() {
