@@ -13,26 +13,14 @@ import (
 	"google.golang.org/grpc"
 )
 
-
 // A RpcServer is a rpc server.
 type RpcServer struct {
 	server   internal.Server
 	register internal.RegisterFn
 }
 
-
 // MustNewServer returns a RpcSever, exits on any error.
 func MustNewServer(c RpcServerConf, register internal.RegisterFn) *RpcServer {
-	server, err := NewServer(c, register)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	return server
-}
-
-
-func MustNewServerExtern(c RpcServerConf, register internal.RegisterFn) *RpcServer {
 	server, err := NewServer(c, register)
 	if err != nil {
 		log.Fatal(err)
@@ -50,7 +38,11 @@ func NewServer(c RpcServerConf, register internal.RegisterFn) (*RpcServer, error
 	var server internal.Server
 	metrics := stat.NewMetrics(c.ListenOn)
 	if c.HasEtcd() {
-		server, err = internal.NewRpcPubServerExtern(&c.Etcd, c.ListenOn, internal.WithMetrics(metrics))
+		if c.Etcd.Tls == true {
+			server, err = internal.NewRpcPubServerExtern(&c.Etcd, c.ListenOn, internal.WithMetrics(metrics))
+		} else {
+			server, err = internal.NewRpcPubServer(c.Etcd.Hosts, c.Etcd.Key, c.ListenOn, internal.WithMetrics(metrics))
+		}
 		if err != nil {
 			return nil, err
 		}
