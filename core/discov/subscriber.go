@@ -35,7 +35,13 @@ func NewSubscriber(cafile, certfile, keyfile string, endpoints []string, key str
 	sub := &Subscriber{
 		items: newContainer(subOpts.exclusive),
 	}
-	if err := internal.GetRegistry().MonitorExtern(cafile, certfile, keyfile, endpoints, key, sub.items); err != nil {
+	var err error
+	if len(cafile) == 0 {
+		err = internal.GetRegistry().Monitor(endpoints, key, sub.items)
+	} else {
+		err = internal.GetRegistry().MonitorExtern(cafile, certfile, keyfile, endpoints, key, sub.items)
+	}
+	if err != nil {
 		return nil, err
 	}
 

@@ -59,7 +59,13 @@ func NewPublisher(endpoints []string, key, value string, tls bool, cafile, certf
 
 // KeepAlive keeps key:value alive.
 func (p *Publisher) KeepAlive() error {
-	cli, err := internal.GetRegistry().GetConnExtern(p.endpoints, p.Cafile, p.Certfile, p.Keyfile)
+	var cli internal.EtcdClient
+	var err error
+	if p.Tls == true {
+		cli, err = internal.GetRegistry().GetConnExtern(p.endpoints, p.Cafile, p.Certfile, p.Keyfile)
+	} else {
+		cli, err = internal.GetRegistry().GetConn(p.endpoints)
+	}
 	if err != nil {
 		return err
 	}

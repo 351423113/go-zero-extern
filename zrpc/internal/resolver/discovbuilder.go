@@ -8,9 +8,9 @@ import (
 )
 
 type discovBuilder struct {
-	Cafile   string
-	Certfile string
-	Keyfile  string
+	Cafile   string `json:",optional"`
+	Certfile string `json:",optional"`
+	Keyfile  string `json:",optional"`
 }
 
 func (d *discovBuilder) Build(target resolver.Target, cc resolver.ClientConn, opts resolver.BuildOptions) (
