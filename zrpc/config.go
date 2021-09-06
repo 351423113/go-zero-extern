@@ -1,9 +1,9 @@
 package zrpc
 
 import (
-	"github.com/351423113/go-zero-extern/core/discov"
-	"github.com/351423113/go-zero-extern/core/service"
-	"github.com/351423113/go-zero-extern/core/stores/redis"
+	"github.com/lukebull/go-zero-extern/core/discov"
+	"github.com/lukebull/go-zero-extern/core/service"
+	"github.com/lukebull/go-zero-extern/core/stores/redis"
 )
 
 type (

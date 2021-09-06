@@ -6,11 +6,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/stores/cache"
-	"github.com/351423113/go-zero-extern/core/stores/sqlc"
-	"github.com/351423113/go-zero-extern/core/stores/sqlx"
-	"github.com/351423113/go-zero-extern/core/stringx"
-	"github.com/351423113/go-zero-extern/tools/goctl/model/sql/builderx"
+	"github.com/lukebull/go-zero-extern/core/stores/cache"
+	"github.com/lukebull/go-zero-extern/core/stores/sqlc"
+	"github.com/lukebull/go-zero-extern/core/stores/sqlx"
+	"github.com/lukebull/go-zero-extern/core/stringx"
+	"github.com/lukebull/go-zero-extern/tools/goctl/model/sql/builderx"
 )
 
 var (

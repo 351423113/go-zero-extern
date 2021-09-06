@@ -3,7 +3,7 @@ package rest
 import (
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/service"
+	"github.com/lukebull/go-zero-extern/core/service"
 )
 
 type (

@@ -7,9 +7,9 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/351423113/go-zero-extern/tools/goctl/api/gogen"
-	conf "github.com/351423113/go-zero-extern/tools/goctl/config"
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/gogen"
+	conf "github.com/lukebull/go-zero-extern/tools/goctl/config"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
 	"github.com/urfave/cli"
 )
 

@@ -3,9 +3,9 @@ package handler
 import (
 	"net/http"
 
-	"github.com/351423113/go-zero-extern/core/logx"
-	"github.com/351423113/go-zero-extern/core/sysx"
-	"github.com/351423113/go-zero-extern/core/trace"
+	"github.com/lukebull/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/core/sysx"
+	"github.com/lukebull/go-zero-extern/core/trace"
 )
 
 // TracingHandler returns a middleware that traces the request.

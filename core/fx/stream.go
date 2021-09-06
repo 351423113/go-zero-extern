@@ -4,9 +4,9 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/351423113/go-zero-extern/core/collection"
-	"github.com/351423113/go-zero-extern/core/lang"
-	"github.com/351423113/go-zero-extern/core/threading"
+	"github.com/lukebull/go-zero-extern/core/collection"
+	"github.com/lukebull/go-zero-extern/core/lang"
+	"github.com/lukebull/go-zero-extern/core/threading"
 )
 
 const (

@@ -3,8 +3,8 @@ package serverinterceptors
 import (
 	"context"
 
-	"github.com/351423113/go-zero-extern/core/breaker"
-	"github.com/351423113/go-zero-extern/zrpc/internal/codes"
+	"github.com/lukebull/go-zero-extern/core/breaker"
+	"github.com/lukebull/go-zero-extern/zrpc/internal/codes"
 	"google.golang.org/grpc"
 )
 

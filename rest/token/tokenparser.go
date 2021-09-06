@@ -6,9 +6,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/timex"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/dgrijalva/jwt-go/request"
+	"github.com/lukebull/go-zero-extern/core/timex"
 )
 
 const claimHistoryResetDuration = time.Hour * 24

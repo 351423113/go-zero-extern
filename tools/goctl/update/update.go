@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"path"
 
-	"github.com/351423113/go-zero-extern/core/conf"
-	"github.com/351423113/go-zero-extern/core/hash"
-	"github.com/351423113/go-zero-extern/core/logx"
-	"github.com/351423113/go-zero-extern/tools/goctl/update/config"
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
+	"github.com/lukebull/go-zero-extern/core/conf"
+	"github.com/lukebull/go-zero-extern/core/hash"
+	"github.com/lukebull/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/tools/goctl/update/config"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
 )
 
 const (

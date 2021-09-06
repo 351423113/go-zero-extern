@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/lang"
-	"github.com/351423113/go-zero-extern/core/threading"
-	"github.com/351423113/go-zero-extern/core/timex"
+	"github.com/lukebull/go-zero-extern/core/lang"
+	"github.com/lukebull/go-zero-extern/core/threading"
+	"github.com/lukebull/go-zero-extern/core/timex"
 )
 
 const drainWorkers = 8

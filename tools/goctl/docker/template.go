@@ -1,7 +1,7 @@
 package docker
 
 import (
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
 	"github.com/urfave/cli"
 )
 

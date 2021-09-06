@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/351423113/go-zero-extern/core/lang"
-	"github.com/351423113/go-zero-extern/core/mapping"
+	"github.com/lukebull/go-zero-extern/core/lang"
+	"github.com/lukebull/go-zero-extern/core/mapping"
 )
 
 const (

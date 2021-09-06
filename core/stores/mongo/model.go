@@ -4,8 +4,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/breaker"
 	"github.com/globalsign/mgo"
+	"github.com/lukebull/go-zero-extern/core/breaker"
 )
 
 type (

@@ -3,8 +3,8 @@ package gen
 import (
 	"fmt"
 
-	"github.com/351423113/go-zero-extern/tools/goctl/model/sql/template"
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/model/sql/template"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
 )
 
 func genNew(table Table, withCache, postgreSql bool) (string, error) {

@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/fs"
-	"github.com/351423113/go-zero-extern/core/lang"
-	"github.com/351423113/go-zero-extern/core/timex"
+	"github.com/lukebull/go-zero-extern/core/fs"
+	"github.com/lukebull/go-zero-extern/core/lang"
+	"github.com/lukebull/go-zero-extern/core/timex"
 )
 
 const (

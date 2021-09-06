@@ -1,8 +1,8 @@
 package generator
 
 import (
-	conf "github.com/351423113/go-zero-extern/tools/goctl/config"
-	"github.com/351423113/go-zero-extern/tools/goctl/rpc/parser"
+	conf "github.com/lukebull/go-zero-extern/tools/goctl/config"
+	"github.com/lukebull/go-zero-extern/tools/goctl/rpc/parser"
 )
 
 // Generator defines a generator interface to describe how to generate rpc service

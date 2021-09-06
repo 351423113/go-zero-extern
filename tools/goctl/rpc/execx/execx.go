@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
-	"github.com/351423113/go-zero-extern/tools/goctl/vars"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/vars"
 )
 
 // Run provides the execution of shell scripts in golang,

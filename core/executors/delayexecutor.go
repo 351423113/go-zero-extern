@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/threading"
+	"github.com/lukebull/go-zero-extern/core/threading"
 )
 
 // A DelayExecutor delays a tasks on given delay interval.

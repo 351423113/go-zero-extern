@@ -10,8 +10,8 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/351423113/go-zero-extern/core/codec"
-	"github.com/351423113/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/core/codec"
+	"github.com/lukebull/go-zero-extern/core/logx"
 )
 
 const maxBytes = 1 << 20 // 1 MiB

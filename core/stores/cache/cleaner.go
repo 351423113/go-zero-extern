@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/collection"
-	"github.com/351423113/go-zero-extern/core/logx"
-	"github.com/351423113/go-zero-extern/core/proc"
-	"github.com/351423113/go-zero-extern/core/stat"
-	"github.com/351423113/go-zero-extern/core/stringx"
-	"github.com/351423113/go-zero-extern/core/threading"
+	"github.com/lukebull/go-zero-extern/core/collection"
+	"github.com/lukebull/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/core/proc"
+	"github.com/lukebull/go-zero-extern/core/stat"
+	"github.com/lukebull/go-zero-extern/core/stringx"
+	"github.com/lukebull/go-zero-extern/core/threading"
 )
 
 const (

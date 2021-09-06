@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/timex"
+	"github.com/lukebull/go-zero-extern/core/timex"
 )
 
 const defaultRefreshInterval = time.Second

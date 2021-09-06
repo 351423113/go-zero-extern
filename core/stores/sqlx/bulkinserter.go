@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/executors"
-	"github.com/351423113/go-zero-extern/core/logx"
-	"github.com/351423113/go-zero-extern/core/stringx"
+	"github.com/lukebull/go-zero-extern/core/executors"
+	"github.com/lukebull/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/core/stringx"
 )
 
 const (

@@ -3,8 +3,8 @@ package executors
 import (
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/syncx"
-	"github.com/351423113/go-zero-extern/core/timex"
+	"github.com/lukebull/go-zero-extern/core/syncx"
+	"github.com/lukebull/go-zero-extern/core/timex"
 )
 
 // A LessExecutor is an executor to limit execution once within given time interval.

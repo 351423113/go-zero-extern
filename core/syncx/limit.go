@@ -3,7 +3,7 @@ package syncx
 import (
 	"errors"
 
-	"github.com/351423113/go-zero-extern/core/lang"
+	"github.com/lukebull/go-zero-extern/core/lang"
 )
 
 // ErrLimitReturn indicates that the more than borrowed elements were returned.

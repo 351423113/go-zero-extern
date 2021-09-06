@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/351423113/go-zero-extern/tools/goctl/api/parser/g4/gen/api"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/parser/g4/gen/api"
 )
 
 // Service describes service for api syntax

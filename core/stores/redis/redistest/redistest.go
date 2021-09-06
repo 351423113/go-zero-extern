@@ -3,9 +3,9 @@ package redistest
 import (
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/lang"
-	"github.com/351423113/go-zero-extern/core/stores/redis"
 	"github.com/alicebob/miniredis/v2"
+	"github.com/lukebull/go-zero-extern/core/lang"
+	"github.com/lukebull/go-zero-extern/core/stores/redis"
 )
 
 // CreateRedis returns a in process redis.Redis.

@@ -5,29 +5,29 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/351423113/go-zero-extern/core/load"
-	"github.com/351423113/go-zero-extern/core/logx"
-	"github.com/351423113/go-zero-extern/core/stat"
-	"github.com/351423113/go-zero-extern/tools/goctl/api/apigen"
-	"github.com/351423113/go-zero-extern/tools/goctl/api/dartgen"
-	"github.com/351423113/go-zero-extern/tools/goctl/api/docgen"
-	"github.com/351423113/go-zero-extern/tools/goctl/api/format"
-	"github.com/351423113/go-zero-extern/tools/goctl/api/gogen"
-	"github.com/351423113/go-zero-extern/tools/goctl/api/javagen"
-	"github.com/351423113/go-zero-extern/tools/goctl/api/ktgen"
-	"github.com/351423113/go-zero-extern/tools/goctl/api/new"
-	"github.com/351423113/go-zero-extern/tools/goctl/api/tsgen"
-	"github.com/351423113/go-zero-extern/tools/goctl/api/validate"
-	"github.com/351423113/go-zero-extern/tools/goctl/configgen"
-	"github.com/351423113/go-zero-extern/tools/goctl/docker"
-	"github.com/351423113/go-zero-extern/tools/goctl/kube"
-	"github.com/351423113/go-zero-extern/tools/goctl/model/mongo"
-	model "github.com/351423113/go-zero-extern/tools/goctl/model/sql/command"
-	"github.com/351423113/go-zero-extern/tools/goctl/plugin"
-	rpc "github.com/351423113/go-zero-extern/tools/goctl/rpc/cli"
-	"github.com/351423113/go-zero-extern/tools/goctl/tpl"
-	"github.com/351423113/go-zero-extern/tools/goctl/upgrade"
 	"github.com/logrusorgru/aurora"
+	"github.com/lukebull/go-zero-extern/core/load"
+	"github.com/lukebull/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/core/stat"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/apigen"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/dartgen"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/docgen"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/format"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/gogen"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/javagen"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/ktgen"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/new"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/tsgen"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/validate"
+	"github.com/lukebull/go-zero-extern/tools/goctl/configgen"
+	"github.com/lukebull/go-zero-extern/tools/goctl/docker"
+	"github.com/lukebull/go-zero-extern/tools/goctl/kube"
+	"github.com/lukebull/go-zero-extern/tools/goctl/model/mongo"
+	model "github.com/lukebull/go-zero-extern/tools/goctl/model/sql/command"
+	"github.com/lukebull/go-zero-extern/tools/goctl/plugin"
+	rpc "github.com/lukebull/go-zero-extern/tools/goctl/rpc/cli"
+	"github.com/lukebull/go-zero-extern/tools/goctl/tpl"
+	"github.com/lukebull/go-zero-extern/tools/goctl/upgrade"
 	"github.com/urfave/cli"
 )
 
@@ -115,7 +115,7 @@ var (
 						},
 						cli.StringFlag{
 							Name:  "style",
-							Usage: "the file naming format, see [https://github.com/351423113/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
+							Usage: "the file naming format, see [https://github.com/lukebull/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
 						},
 						cli.StringFlag{
 							Name:  "home",
@@ -218,7 +218,7 @@ var (
 						},
 						cli.StringFlag{
 							Name:  "style",
-							Usage: "the file naming format, see [https://github.com/351423113/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
+							Usage: "the file naming format, see [https://github.com/lukebull/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
 						},
 					},
 					Action: plugin.PluginCommand,
@@ -346,7 +346,7 @@ var (
 					Flags: []cli.Flag{
 						cli.StringFlag{
 							Name:  "style",
-							Usage: "the file naming format, see [https://github.com/351423113/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
+							Usage: "the file naming format, see [https://github.com/lukebull/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
 						},
 						cli.BoolFlag{
 							Name:  "idea",
@@ -396,7 +396,7 @@ var (
 						},
 						cli.StringFlag{
 							Name:  "style",
-							Usage: "the file naming format, see [https://github.com/351423113/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
+							Usage: "the file naming format, see [https://github.com/lukebull/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
 						},
 						cli.BoolFlag{
 							Name:  "idea",
@@ -433,7 +433,7 @@ var (
 								},
 								cli.StringFlag{
 									Name:  "style",
-									Usage: "the file naming format, see [https://github.com/351423113/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
+									Usage: "the file naming format, see [https://github.com/lukebull/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
 								},
 								cli.BoolFlag{
 									Name:  "cache, c",
@@ -476,7 +476,7 @@ var (
 								},
 								cli.StringFlag{
 									Name:  "style",
-									Usage: "the file naming format, see [https://github.com/351423113/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
+									Usage: "the file naming format, see [https://github.com/lukebull/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
 								},
 								cli.BoolFlag{
 									Name:  "idea",
@@ -521,7 +521,7 @@ var (
 								},
 								cli.StringFlag{
 									Name:  "style",
-									Usage: "the file naming format, see [https://github.com/351423113/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
+									Usage: "the file naming format, see [https://github.com/lukebull/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
 								},
 								cli.BoolFlag{
 									Name:  "idea",
@@ -554,7 +554,7 @@ var (
 						},
 						cli.StringFlag{
 							Name:  "style",
-							Usage: "the file naming format, see [https://github.com/351423113/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
+							Usage: "the file naming format, see [https://github.com/lukebull/go-zero-extern/tree/master/tools/goctl/config/readme.md]",
 						},
 						cli.StringFlag{
 							Name:  "home",

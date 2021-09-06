@@ -4,10 +4,10 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/351423113/go-zero-extern/core/logx"
-	"github.com/351423113/go-zero-extern/rest/handler"
-	"github.com/351423113/go-zero-extern/rest/httpx"
-	"github.com/351423113/go-zero-extern/rest/router"
+	"github.com/lukebull/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/rest/handler"
+	"github.com/lukebull/go-zero-extern/rest/httpx"
+	"github.com/lukebull/go-zero-extern/rest/router"
 )
 
 type (

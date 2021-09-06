@@ -4,8 +4,8 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/351423113/go-zero-extern/core/hash"
-	"github.com/351423113/go-zero-extern/core/stores/redis"
+	"github.com/lukebull/go-zero-extern/core/hash"
+	"github.com/lukebull/go-zero-extern/core/stores/redis"
 )
 
 const (

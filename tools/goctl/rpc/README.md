@@ -136,7 +136,7 @@ OPTIONS:
    --proto_path value, -I value  native command of protoc, specify the directory in which to search for imports. [optional]
    --go_opt value                native command of protoc-gen-go, specify the mapping from proto to go, eg --go_opt=proto_import=go_package_import. [optional]
    --dir value, -d value         the target path of the code
-   --style value                 the file naming format, see [https://github.com/351423113/go-zero-extern/tree/master/tools/goctl/config/readme.md]
+   --style value                 the file naming format, see [https://github.com/lukebull/go-zero-extern/tree/master/tools/goctl/config/readme.md]
    --idea                        whether the command execution environment is from idea plugin. [optional]
 
 ```
@@ -254,11 +254,11 @@ service Greet {
     *rrBalanced does not implement Picker (wrong type for Pick method)
 		have Pick(context.Context, balancer.PickInfo) (balancer.SubConn, func(balancer.DoneInfo), error)
     want Pick(balancer.PickInfo) (balancer.PickResult, error)
-    #github.com/351423113/go-zero-extern/zrpc/internal/balancer/p2c
-    ../../../go/pkg/mod/github.com/351423113/go-zero-extern@v1.0.12/zrpc/internal/balancer/p2c/p2c.go:41:32: not enough arguments in call to base.NewBalancerBuilder
+    #github.com/lukebull/go-zero-extern/zrpc/internal/balancer/p2c
+    ../../../go/pkg/mod/github.com/lukebull/go-zero-extern@v1.0.12/zrpc/internal/balancer/p2c/p2c.go:41:32: not enough arguments in call to base.NewBalancerBuilder
 	have (string, *p2cPickerBuilder)
   want (string, base.PickerBuilder, base.Config)
-  ../../../go/pkg/mod/github.com/351423113/go-zero-extern@v1.0.12/zrpc/internal/balancer/p2c/p2c.go:58:9: cannot use &p2cPicker literal (type *p2cPicker) as type balancer.Picker in return argument:
+  ../../../go/pkg/mod/github.com/lukebull/go-zero-extern@v1.0.12/zrpc/internal/balancer/p2c/p2c.go:58:9: cannot use &p2cPicker literal (type *p2cPicker) as type balancer.Picker in return argument:
 	*p2cPicker does not implement balancer.Picker (wrong type for Pick method)
 		have Pick(context.Context, balancer.PickInfo) (balancer.SubConn, func(balancer.DoneInfo), error)
 		want Pick(balancer.PickInfo) (balancer.PickResult, error)

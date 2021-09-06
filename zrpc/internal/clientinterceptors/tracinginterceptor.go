@@ -3,7 +3,7 @@ package clientinterceptors
 import (
 	"context"
 
-	"github.com/351423113/go-zero-extern/core/trace"
+	"github.com/lukebull/go-zero-extern/core/trace"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 )

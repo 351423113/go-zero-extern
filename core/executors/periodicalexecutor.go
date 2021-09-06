@@ -6,11 +6,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/lang"
-	"github.com/351423113/go-zero-extern/core/proc"
-	"github.com/351423113/go-zero-extern/core/syncx"
-	"github.com/351423113/go-zero-extern/core/threading"
-	"github.com/351423113/go-zero-extern/core/timex"
+	"github.com/lukebull/go-zero-extern/core/lang"
+	"github.com/lukebull/go-zero-extern/core/proc"
+	"github.com/lukebull/go-zero-extern/core/syncx"
+	"github.com/lukebull/go-zero-extern/core/threading"
+	"github.com/lukebull/go-zero-extern/core/timex"
 )
 
 const idleRound = 10

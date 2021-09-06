@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/351423113/go-zero-extern/core/breaker"
-	"github.com/351423113/go-zero-extern/core/logx"
-	"github.com/351423113/go-zero-extern/core/stat"
-	"github.com/351423113/go-zero-extern/rest/httpx"
-	"github.com/351423113/go-zero-extern/rest/internal/security"
+	"github.com/lukebull/go-zero-extern/core/breaker"
+	"github.com/lukebull/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/core/stat"
+	"github.com/lukebull/go-zero-extern/rest/httpx"
+	"github.com/lukebull/go-zero-extern/rest/internal/security"
 )
 
 const breakerSeparator = "://"

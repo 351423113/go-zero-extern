@@ -5,9 +5,9 @@ import (
 	"log"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/errorx"
-	"github.com/351423113/go-zero-extern/core/hash"
-	"github.com/351423113/go-zero-extern/core/syncx"
+	"github.com/lukebull/go-zero-extern/core/errorx"
+	"github.com/lukebull/go-zero-extern/core/hash"
+	"github.com/lukebull/go-zero-extern/core/syncx"
 )
 
 type (

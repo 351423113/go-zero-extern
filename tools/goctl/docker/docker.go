@@ -9,9 +9,9 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
-	ctlutil "github.com/351423113/go-zero-extern/tools/goctl/util"
 	"github.com/logrusorgru/aurora"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
+	ctlutil "github.com/lukebull/go-zero-extern/tools/goctl/util"
 	"github.com/urfave/cli"
 )
 

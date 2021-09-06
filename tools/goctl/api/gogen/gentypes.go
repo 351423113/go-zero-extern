@@ -7,11 +7,11 @@ import (
 	"path"
 	"strings"
 
-	"github.com/351423113/go-zero-extern/tools/goctl/api/spec"
-	apiutil "github.com/351423113/go-zero-extern/tools/goctl/api/util"
-	"github.com/351423113/go-zero-extern/tools/goctl/config"
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/format"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/spec"
+	apiutil "github.com/lukebull/go-zero-extern/tools/goctl/api/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/config"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/format"
 )
 
 const (

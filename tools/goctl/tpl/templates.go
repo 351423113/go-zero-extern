@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/351423113/go-zero-extern/core/errorx"
-	"github.com/351423113/go-zero-extern/tools/goctl/api/gogen"
-	"github.com/351423113/go-zero-extern/tools/goctl/docker"
-	"github.com/351423113/go-zero-extern/tools/goctl/kube"
-	mongogen "github.com/351423113/go-zero-extern/tools/goctl/model/mongo/generate"
-	modelgen "github.com/351423113/go-zero-extern/tools/goctl/model/sql/gen"
-	rpcgen "github.com/351423113/go-zero-extern/tools/goctl/rpc/generator"
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
 	"github.com/logrusorgru/aurora"
+	"github.com/lukebull/go-zero-extern/core/errorx"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/gogen"
+	"github.com/lukebull/go-zero-extern/tools/goctl/docker"
+	"github.com/lukebull/go-zero-extern/tools/goctl/kube"
+	mongogen "github.com/lukebull/go-zero-extern/tools/goctl/model/mongo/generate"
+	modelgen "github.com/lukebull/go-zero-extern/tools/goctl/model/sql/gen"
+	rpcgen "github.com/lukebull/go-zero-extern/tools/goctl/rpc/generator"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
 	"github.com/urfave/cli"
 )
 

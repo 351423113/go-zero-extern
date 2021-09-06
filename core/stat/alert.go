@@ -10,11 +10,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/executors"
-	"github.com/351423113/go-zero-extern/core/logx"
-	"github.com/351423113/go-zero-extern/core/proc"
-	"github.com/351423113/go-zero-extern/core/sysx"
-	"github.com/351423113/go-zero-extern/core/timex"
+	"github.com/lukebull/go-zero-extern/core/executors"
+	"github.com/lukebull/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/core/proc"
+	"github.com/lukebull/go-zero-extern/core/sysx"
+	"github.com/lukebull/go-zero-extern/core/timex"
 )
 
 const (

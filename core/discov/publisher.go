@@ -1,12 +1,12 @@
 package discov
 
 import (
-	"github.com/351423113/go-zero-extern/core/discov/internal"
-	"github.com/351423113/go-zero-extern/core/lang"
-	"github.com/351423113/go-zero-extern/core/logx"
-	"github.com/351423113/go-zero-extern/core/proc"
-	"github.com/351423113/go-zero-extern/core/syncx"
-	"github.com/351423113/go-zero-extern/core/threading"
+	"github.com/lukebull/go-zero-extern/core/discov/internal"
+	"github.com/lukebull/go-zero-extern/core/lang"
+	"github.com/lukebull/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/core/proc"
+	"github.com/lukebull/go-zero-extern/core/syncx"
+	"github.com/lukebull/go-zero-extern/core/threading"
 	clientv3 "go.etcd.io/etcd/client/v3"
 )
 

@@ -7,12 +7,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/jsonx"
-	"github.com/351423113/go-zero-extern/core/logx"
-	"github.com/351423113/go-zero-extern/core/mathx"
-	"github.com/351423113/go-zero-extern/core/stat"
-	"github.com/351423113/go-zero-extern/core/stores/redis"
-	"github.com/351423113/go-zero-extern/core/syncx"
+	"github.com/lukebull/go-zero-extern/core/jsonx"
+	"github.com/lukebull/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/core/mathx"
+	"github.com/lukebull/go-zero-extern/core/stat"
+	"github.com/lukebull/go-zero-extern/core/stores/redis"
+	"github.com/lukebull/go-zero-extern/core/syncx"
 )
 
 const (

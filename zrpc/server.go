@@ -4,12 +4,12 @@ import (
 	"log"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/load"
-	"github.com/351423113/go-zero-extern/core/logx"
-	"github.com/351423113/go-zero-extern/core/stat"
-	"github.com/351423113/go-zero-extern/zrpc/internal"
-	"github.com/351423113/go-zero-extern/zrpc/internal/auth"
-	"github.com/351423113/go-zero-extern/zrpc/internal/serverinterceptors"
+	"github.com/lukebull/go-zero-extern/core/load"
+	"github.com/lukebull/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/core/stat"
+	"github.com/lukebull/go-zero-extern/zrpc/internal"
+	"github.com/lukebull/go-zero-extern/zrpc/internal/auth"
+	"github.com/lukebull/go-zero-extern/zrpc/internal/serverinterceptors"
 	"google.golang.org/grpc"
 )
 

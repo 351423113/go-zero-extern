@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"text/template"
 
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
 	"github.com/logrusorgru/aurora"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
 	"github.com/urfave/cli"
 )
 

@@ -6,12 +6,12 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/351423113/go-zero-extern/core/collection"
-	"github.com/351423113/go-zero-extern/tools/goctl/model/sql/converter"
-	"github.com/351423113/go-zero-extern/tools/goctl/model/sql/model"
-	"github.com/351423113/go-zero-extern/tools/goctl/model/sql/util"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/console"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/stringx"
+	"github.com/lukebull/go-zero-extern/core/collection"
+	"github.com/lukebull/go-zero-extern/tools/goctl/model/sql/converter"
+	"github.com/lukebull/go-zero-extern/tools/goctl/model/sql/model"
+	"github.com/lukebull/go-zero-extern/tools/goctl/model/sql/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/console"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/stringx"
 	"github.com/zeromicro/ddl-parser/parser"
 )
 

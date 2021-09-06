@@ -5,11 +5,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	conf "github.com/351423113/go-zero-extern/tools/goctl/config"
-	"github.com/351423113/go-zero-extern/tools/goctl/rpc/parser"
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/format"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/stringx"
+	conf "github.com/lukebull/go-zero-extern/tools/goctl/config"
+	"github.com/lukebull/go-zero-extern/tools/goctl/rpc/parser"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/format"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/stringx"
 )
 
 const mainTemplate = `package main
@@ -20,8 +20,8 @@ import (
 
 	{{.imports}}
 
-	"github.com/351423113/go-zero-extern/core/conf"
-	"github.com/351423113/go-zero-extern/zrpc"
+	"github.com/lukebull/go-zero-extern/core/conf"
+	"github.com/lukebull/go-zero-extern/zrpc"
 	"google.golang.org/grpc"
 )
 

@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/351423113/go-zero-extern/tools/goctl/api/parser/g4/gen/api"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/console"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/parser/g4/gen/api"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/console"
 	"github.com/zeromicro/antlr"
 )
 

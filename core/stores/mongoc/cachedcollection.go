@@ -1,10 +1,10 @@
 package mongoc
 
 import (
-	"github.com/351423113/go-zero-extern/core/stores/cache"
-	"github.com/351423113/go-zero-extern/core/stores/mongo"
-	"github.com/351423113/go-zero-extern/core/syncx"
 	"github.com/globalsign/mgo"
+	"github.com/lukebull/go-zero-extern/core/stores/cache"
+	"github.com/lukebull/go-zero-extern/core/stores/mongo"
+	"github.com/lukebull/go-zero-extern/core/syncx"
 )
 
 var (

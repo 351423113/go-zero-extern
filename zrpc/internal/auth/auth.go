@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/collection"
-	"github.com/351423113/go-zero-extern/core/stores/redis"
+	"github.com/lukebull/go-zero-extern/core/collection"
+	"github.com/lukebull/go-zero-extern/core/stores/redis"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"

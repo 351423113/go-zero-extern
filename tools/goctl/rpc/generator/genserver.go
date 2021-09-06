@@ -5,12 +5,12 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/351423113/go-zero-extern/core/collection"
-	conf "github.com/351423113/go-zero-extern/tools/goctl/config"
-	"github.com/351423113/go-zero-extern/tools/goctl/rpc/parser"
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/format"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/stringx"
+	"github.com/lukebull/go-zero-extern/core/collection"
+	conf "github.com/lukebull/go-zero-extern/tools/goctl/config"
+	"github.com/lukebull/go-zero-extern/tools/goctl/rpc/parser"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/format"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/stringx"
 )
 
 const (

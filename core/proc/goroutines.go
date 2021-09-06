@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/core/logx"
 )
 
 const (

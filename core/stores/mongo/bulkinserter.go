@@ -3,9 +3,9 @@ package mongo
 import (
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/executors"
-	"github.com/351423113/go-zero-extern/core/logx"
 	"github.com/globalsign/mgo"
+	"github.com/lukebull/go-zero-extern/core/executors"
+	"github.com/lukebull/go-zero-extern/core/logx"
 )
 
 const (

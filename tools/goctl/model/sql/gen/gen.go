@@ -8,15 +8,15 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/351423113/go-zero-extern/tools/goctl/config"
-	"github.com/351423113/go-zero-extern/tools/goctl/model/sql/model"
-	"github.com/351423113/go-zero-extern/tools/goctl/model/sql/parser"
-	"github.com/351423113/go-zero-extern/tools/goctl/model/sql/template"
-	modelutil "github.com/351423113/go-zero-extern/tools/goctl/model/sql/util"
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/console"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/format"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/stringx"
+	"github.com/lukebull/go-zero-extern/tools/goctl/config"
+	"github.com/lukebull/go-zero-extern/tools/goctl/model/sql/model"
+	"github.com/lukebull/go-zero-extern/tools/goctl/model/sql/parser"
+	"github.com/lukebull/go-zero-extern/tools/goctl/model/sql/template"
+	modelutil "github.com/lukebull/go-zero-extern/tools/goctl/model/sql/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/console"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/format"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/stringx"
 )
 
 const (

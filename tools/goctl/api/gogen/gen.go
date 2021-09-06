@@ -11,13 +11,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/logx"
-	apiformat "github.com/351423113/go-zero-extern/tools/goctl/api/format"
-	"github.com/351423113/go-zero-extern/tools/goctl/api/parser"
-	apiutil "github.com/351423113/go-zero-extern/tools/goctl/api/util"
-	"github.com/351423113/go-zero-extern/tools/goctl/config"
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
 	"github.com/logrusorgru/aurora"
+	"github.com/lukebull/go-zero-extern/core/logx"
+	apiformat "github.com/lukebull/go-zero-extern/tools/goctl/api/format"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/parser"
+	apiutil "github.com/lukebull/go-zero-extern/tools/goctl/api/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/config"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
 	"github.com/urfave/cli"
 )
 

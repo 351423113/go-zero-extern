@@ -4,7 +4,7 @@ import (
 	"os"
 	"text/template"
 
-	"github.com/351423113/go-zero-extern/tools/goctl/api/spec"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/spec"
 )
 
 const dataTemplate = `// --{{with .Info}}{{.Title}}{{end}}--

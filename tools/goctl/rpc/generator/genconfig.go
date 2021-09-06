@@ -5,15 +5,15 @@ import (
 	"os"
 	"path/filepath"
 
-	conf "github.com/351423113/go-zero-extern/tools/goctl/config"
-	"github.com/351423113/go-zero-extern/tools/goctl/rpc/parser"
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/format"
+	conf "github.com/lukebull/go-zero-extern/tools/goctl/config"
+	"github.com/lukebull/go-zero-extern/tools/goctl/rpc/parser"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/format"
 )
 
 const configTemplate = `package config
 
-import "github.com/351423113/go-zero-extern/zrpc"
+import "github.com/lukebull/go-zero-extern/zrpc"
 
 type Config struct {
 	zrpc.RpcServerConf
@@ -23,7 +23,7 @@ type Config struct {
 // GenConfig generates the configuration structure definition file of the rpc service,
 // which contains the zrpc.RpcServerConf configuration item by default.
 // You can specify the naming style of the target file name through config.Config. For details,
-// see https://github.com/351423113/go-zero-extern/tree/master/tools/goctl/config/config.go
+// see https://github.com/lukebull/go-zero-extern/tree/master/tools/goctl/config/config.go
 func (g *DefaultGenerator) GenConfig(ctx DirContext, _ parser.Proto, cfg *conf.Config) error {
 	dir := ctx.GetConfig()
 	configFilename, err := format.FileNamingFormat(cfg.NamingFormat, "config")

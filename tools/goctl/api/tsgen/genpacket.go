@@ -6,9 +6,9 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/351423113/go-zero-extern/tools/goctl/api/spec"
-	apiutil "github.com/351423113/go-zero-extern/tools/goctl/api/util"
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/spec"
+	apiutil "github.com/lukebull/go-zero-extern/tools/goctl/api/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
 )
 
 const (

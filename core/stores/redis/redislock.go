@@ -6,8 +6,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/logx"
 	red "github.com/go-redis/redis"
+	"github.com/lukebull/go-zero-extern/core/logx"
 )
 
 const (

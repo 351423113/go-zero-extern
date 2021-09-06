@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/351423113/go-zero-extern/core/proc"
+	"github.com/lukebull/go-zero-extern/core/proc"
 )
 
 // StartHttp starts a http server.

@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/351423113/go-zero-extern/tools/goctl/api/spec"
-	"github.com/351423113/go-zero-extern/tools/goctl/config"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/format"
-	"github.com/351423113/go-zero-extern/tools/goctl/vars"
+	"github.com/lukebull/go-zero-extern/tools/goctl/api/spec"
+	"github.com/lukebull/go-zero-extern/tools/goctl/config"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/format"
+	"github.com/lukebull/go-zero-extern/tools/goctl/vars"
 )
 
 const (

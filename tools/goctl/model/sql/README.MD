@@ -36,11 +36,11 @@ goctl model 为go-zero下的工具模块中的组件之一，目前支持识别m
     	"strings"
     	"time"
     
-    	"github.com/351423113/go-zero-extern/core/stores/cache"
-    	"github.com/351423113/go-zero-extern/core/stores/sqlc"
-    	"github.com/351423113/go-zero-extern/core/stores/sqlx"
-    	"github.com/351423113/go-zero-extern/core/stringx"
-    	"github.com/351423113/go-zero-extern/tools/goctl/model/sql/builderx"
+    	"github.com/lukebull/go-zero-extern/core/stores/cache"
+    	"github.com/lukebull/go-zero-extern/core/stores/sqlc"
+    	"github.com/lukebull/go-zero-extern/core/stores/sqlx"
+    	"github.com/lukebull/go-zero-extern/core/stringx"
+    	"github.com/lukebull/go-zero-extern/tools/goctl/model/sql/builderx"
     )
     
     var (
@@ -261,7 +261,7 @@ OPTIONS:
     OPTIONS:
        --src value, -s value  the path or path globbing patterns of the ddl
        --dir value, -d value  the target dir
-       --style value          the file naming format, see [https://github.com/351423113/go-zero-extern/tree/master/tools/goctl/config/readme.md]
+       --style value          the file naming format, see [https://github.com/lukebull/go-zero-extern/tree/master/tools/goctl/config/readme.md]
        --cache, -c            generate code with cache [optional]
        --idea                 for idea plugin [optional]
        --database, -db        the name of database [optional]
@@ -287,7 +287,7 @@ OPTIONS:
        --table value, -t value  the table or table globbing patterns in the database
        --cache, -c              generate code with cache [optional]
        --dir value, -d value    the target dir
-       --style value            the file naming format, see [https://github.com/351423113/go-zero-extern/tree/master/tools/goctl/config/readme.md]
+       --style value            the file naming format, see [https://github.com/lukebull/go-zero-extern/tree/master/tools/goctl/config/readme.md]
        --idea                   for idea plugin [optional]
 
 

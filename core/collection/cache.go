@@ -6,9 +6,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/351423113/go-zero-extern/core/logx"
-	"github.com/351423113/go-zero-extern/core/mathx"
-	"github.com/351423113/go-zero-extern/core/syncx"
+	"github.com/lukebull/go-zero-extern/core/logx"
+	"github.com/lukebull/go-zero-extern/core/mathx"
+	"github.com/lukebull/go-zero-extern/core/syncx"
 )
 
 const (

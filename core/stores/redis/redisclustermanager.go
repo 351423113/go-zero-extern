@@ -4,8 +4,8 @@ import (
 	"crypto/tls"
 	"io"
 
-	"github.com/351423113/go-zero-extern/core/syncx"
 	red "github.com/go-redis/redis"
+	"github.com/lukebull/go-zero-extern/core/syncx"
 )
 
 var clusterManager = syncx.NewResourceManager()

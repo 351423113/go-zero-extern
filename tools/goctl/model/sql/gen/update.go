@@ -3,10 +3,10 @@ package gen
 import (
 	"strings"
 
-	"github.com/351423113/go-zero-extern/core/collection"
-	"github.com/351423113/go-zero-extern/tools/goctl/model/sql/template"
-	"github.com/351423113/go-zero-extern/tools/goctl/util"
-	"github.com/351423113/go-zero-extern/tools/goctl/util/stringx"
+	"github.com/lukebull/go-zero-extern/core/collection"
+	"github.com/lukebull/go-zero-extern/tools/goctl/model/sql/template"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util"
+	"github.com/lukebull/go-zero-extern/tools/goctl/util/stringx"
 )
 
 func genUpdate(table Table, withCache, postgreSql bool) (string, string, error) {

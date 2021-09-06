@@ -3,7 +3,7 @@ package serverinterceptors
 import (
 	"context"
 
-	"github.com/351423113/go-zero-extern/zrpc/internal/auth"
+	"github.com/lukebull/go-zero-extern/zrpc/internal/auth"
 	"google.golang.org/grpc"
 )
 
