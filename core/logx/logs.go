@@ -503,9 +503,9 @@ func stackSync(msg string) {
 }
 
 func statSync(msg string) {
-	if shouldLog(InfoLevel) {
-		output(statLog, levelStat, msg)
-	}
+	//if shouldLog(InfoLevel) {
+	//	output(statLog, levelStat, msg)
+	//}
 }
 
 type logWriter struct {
